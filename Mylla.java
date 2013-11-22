@@ -9,6 +9,7 @@ import javax.swing.*;
 	public class Mylla  implements ActionListener {
 		int count = 0;
 		char[][]score = new char[3][3];
+		Font f = new Font("Dialog", Font.PLAIN, 50);
 	private JFrame window = new JFrame("Tic-Tac-Toe");
 	private JButton button1 = new JButton("");
 	private JButton button2 = new JButton("");
@@ -21,7 +22,6 @@ import javax.swing.*;
 	private JButton button9 = new JButton("");
 
 
-
 	public Mylla(){
 		for(int i = 0; i <3; i++)
 		{
@@ -31,22 +31,22 @@ import javax.swing.*;
 			}
 		}
 		
-	
-	/*Create Window*/
 	window.setSize(400,400);
 	window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	window.setLayout(new GridLayout(3,3));
 
-	window.add(button1);
-	window.add(button2);
-	window.add(button3);
-	window.add(button4);
-	window.add(button5);
-	window.add(button6);
-	window.add(button7);
-	window.add(button8);
-	window.add(button9);
-
+	
+	
+	window.add(button1).setFont(f);
+	window.add(button2).setFont(f);
+	window.add(button3).setFont(f);
+	window.add(button4).setFont(f);
+	window.add(button5).setFont(f);
+	window.add(button6).setFont(f);
+	window.add(button7).setFont(f);
+	window.add(button8).setFont(f);
+	window.add(button9).setFont(f);
+	
 	button1.addActionListener(this);
 	button2.addActionListener(this);
 	button3.addActionListener(this);
@@ -70,7 +70,7 @@ import javax.swing.*;
 		}
 		count+=1;
 		button.setEnabled(false);
-		
+		 
 		checkforwin();
 	}
 	public void checkforwin(){
@@ -109,7 +109,7 @@ import javax.swing.*;
 		}
 		else if(count == 9){
 			
-			System.out.println("we have a Draw!");
+			winner('D');
 		}
 	}
 	public void winner(char x){
@@ -122,12 +122,37 @@ import javax.swing.*;
 		button7.setEnabled(false);
 		button8.setEnabled(false);
 		button9.setEnabled(false);
-		if(x =='X')
-		{	
-		System.out.println("Player 1 Wins!");
+		
+		button1.setVisible(false);
+		button2.setVisible(false);
+		button3.setVisible(false);
+		button4.setVisible(false);
+		button5.setVisible(false);
+		button6.setVisible(false);
+		
+		window.remove(button1);
+		window.remove(button2);
+		window.remove(button3);
+		window.remove(button4);
+		window.remove(button5);
+		window.remove(button6);
+		button7.setVisible(false);
+		button9.setVisible(false);
+		
+		if(x == 'D')
+		{
+			button8.setBackground(Color.white);
+			button8.setText("Draw!");
 		}
+		else if(x =='X')
+		{	
+			button8.setBackground(Color.white);
+		button8.setText("Player 1 wins!");
+		}
+		
 		else{
-			System.out.println("Player 2 Wins!");
+			button8.setBackground(Color.white);
+		button8.setText("Player 2 wins!");	
 		}
 	}
 	public void actionPerformed(ActionEvent e) {
