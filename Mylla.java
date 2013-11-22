@@ -31,6 +31,7 @@ import javax.swing.*;
 			}
 		}
 		
+		
 	window.setSize(400,400);
 	window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	window.setLayout(new GridLayout(3,3));
@@ -243,6 +244,10 @@ import javax.swing.*;
 	    	}
 	    }
 
+	}
+	
+	public char getScore(int row, int col){
+		return score[row][col];
 	}
 
 	public static void main(String[] args){
