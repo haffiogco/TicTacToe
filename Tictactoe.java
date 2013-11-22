@@ -1,18 +1,14 @@
+package Mylla;
 import java.awt.*;
 import java.awt.event.*;
 
 import javax.swing.*;
 
-/**
- * Created with IntelliJ IDEA.
- * User: Stefán
- * Date: 22.11.2013
- * Time: 18:02
- * To change this template use File | Settings | File Templates.
- */
 public class Tictactoe implements ActionListener {
     private int player;
     private int board[];
+    private int counter;
+    private boolean win;
     private Font f = new Font("Dialog", Font.PLAIN, 50);
 
     private JFrame window = new JFrame("Tic-Tac-Toe");
@@ -22,6 +18,8 @@ public class Tictactoe implements ActionListener {
         player = 1;
         board = new int[9];
         buttons = new JButton[9];
+        win = false;
+        counter= 0;
         for(int i = 0; i < buttons.length; i++){
             buttons[i] = new JButton();
         }
@@ -73,41 +71,65 @@ public class Tictactoe implements ActionListener {
         else{
             buttons[bNr].setText("O");
         }
-
         buttons[bNr].setEnabled(false);
-
-        if(checkforwin()){
-            win();
+        checkforwin();
+        
+        counter+=1;
+        if(counter == 9)
+        {
+        	gameOver();
         }
+        
+        
+        
+        	
     }
 
-    public boolean checkforwin(){
+    public void checkforwin(){
         for(int i = 0; i < 9; i+=3){
             if(board[i] == board[i+1] && board[i] == board[i+2] && board[i] != 0){
-                return true;
+                win = true;
+                gameOver();
+                
             }
         }
         for(int i = 0; i < 3; i++){
             if(board[i] == board[i+3] && board[i] == board[i+6] && board[i] != 0){
-                return true;
+            	win = true;
+                gameOver();
             }
         }
 
         if(board[0] == board[4] && board[0] == board[8] && board[0] != 0){
-            return true;
+        	win = true;
+            gameOver();
         }
 
         if(board[2] == board[4] && board[2] == board[6] && board[2] != 0){
-            return true;
+        	win = true;
+            gameOver();
         }
 
-        return false;
     }
 
-    public void win(){
+    public void gameOver(){
         for(int i =0; i < buttons.length; i++){
             buttons[i].setEnabled(false);
             buttons[i].setVisible(false);
+        }
+        for(int i = 3; i<9;i++)
+        {
+        	window.remove(buttons[i]);
+        }
+        if(win == true){
+	        buttons[1].setText("Player "+player+" wins");
+	        buttons[1].setBackground(Color.white);
+	        buttons[1].setVisible(true);
+        }
+        else{
+        	 buttons[1].setText("Draw");
+             buttons[1].setBackground(Color.white);
+             buttons[1].setVisible(true);
         }
     }
 
