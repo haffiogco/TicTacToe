@@ -1,4 +1,3 @@
-package Mylla;
 import java.awt.*;
 import java.awt.event.*;
 
@@ -131,6 +130,22 @@ public class Tictactoe implements ActionListener {
              buttons[1].setBackground(Color.white);
              buttons[1].setVisible(true);
         }
+    }
+
+    public int getPlayer(){
+        return player;
+    }
+
+    public int getTurn(){
+        return counter;
+    }
+
+    public int getBoard(int n){
+        return board[n];
+    }
+
+    public boolean getWin(){
+        return win;
     }
 
     public static void main(String[] args){
