@@ -1,9 +1,12 @@
-﻿//package spalding;
+package is.ru.helloworld;
 
-import org.junit.Test;
+
 import static org.junit.Assert.assertEquals;
 
-import spalding.Tictactoe;
+
+import org.junit.Test;
+
+import is.ru.helloworld.Tictactoe;
 
 /**
  * Created with IntelliJ IDEA.

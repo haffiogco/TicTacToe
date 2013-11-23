@@ -1,7 +1,10 @@
-//package spalding;
+package is.ru.helloworld;
 
 import java.awt.*;
 import java.awt.event.*;
+
+import static spark.Spark.*;
+import spark.*;
 
 import javax.swing.*;
 
