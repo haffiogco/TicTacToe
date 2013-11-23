@@ -1,4 +1,4 @@
-package is.ru.helloworld;
+package is.spalding.tictactoe;
 
 
 import static org.junit.Assert.assertEquals;
@@ -6,7 +6,7 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-import is.ru.helloworld.Tictactoe;
+import is.spalding.tictactoe.Tictactoe;
 
 /**
  * Created with IntelliJ IDEA.

@@ -1,10 +1,8 @@
-package is.ru.helloworld;
+package is.spalding.tictactoe;
 
 import java.awt.*;
 import java.awt.event.*;
 
-import static spark.Spark.*;
-import spark.*;
 
 import javax.swing.*;
 
