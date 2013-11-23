@@ -83,11 +83,6 @@ public class Tictactoe implements ActionListener {
         
             
     }
-        
-        
-        
-        	
-    }
 
     public void checkforwin(){
         for(int i = 0; i < 9; i+=3){
