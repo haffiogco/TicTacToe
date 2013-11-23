@@ -1,4 +1,4 @@
-package Tictactoe;
+package Spalding;
 
 import java.awt.*;
 import java.awt.event.*;

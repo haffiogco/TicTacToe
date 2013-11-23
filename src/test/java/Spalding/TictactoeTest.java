@@ -1,4 +1,4 @@
-package Test;
+﻿package Spalding;
 
 import org.junit.Test;
 import static junit.framework.Assert.assertEquals;
@@ -7,7 +7,7 @@ import Tictactoe.Tictactoe;
 
 /**
  * Created with IntelliJ IDEA.
- * User: Stefán
+ * User: Stefan
  * Date: 22.11.2013
  * Time: 19:36
  * To change this template use File | Settings | File Templates.
@@ -23,7 +23,7 @@ public class TictactoeTest {
         Tictactoe T = new Tictactoe();
 
         try{
-            //Test á player turn
+            //Test a player turn
             assertEquals(1, T.getPlayer());
             T.pushButton(0);
             assertEquals(1, T.getBoard(0));
@@ -32,7 +32,7 @@ public class TictactoeTest {
             assertEquals(2, T.getBoard(3));
             assertEquals(1, T.getPlayer());
 
-            //Test á win
+            //Test a win
             T.pushButton(1);
             assertEquals(1, T.getBoard(1));
             assertEquals(2, T.getPlayer());
