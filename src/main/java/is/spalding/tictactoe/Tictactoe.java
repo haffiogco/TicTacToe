@@ -52,7 +52,6 @@ public class Tictactoe implements ActionListener {
 
         for(int i = 0; i < buttons.length; i++){
             if(e.getSource() == buttons[i]){
-                board[i] = player;
                 if(player == 1){
                     buttons[i].setText("X");
                 }
@@ -66,8 +65,8 @@ public class Tictactoe implements ActionListener {
     }
 
     public void buttonPressed(int bNr) {
+        board[bNr] = player;
         checkforwin();
-        
         counter+=1;
         if(counter == 9)
         {
