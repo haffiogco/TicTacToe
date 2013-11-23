@@ -148,7 +148,7 @@ public class Tictactoe implements ActionListener {
     }
 
     public void pushButton(int b){
-        buttons[b].doClick();
+        buttonPressed(b);
     }
 
     public static void main(String[] args){
