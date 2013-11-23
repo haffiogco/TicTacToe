@@ -1,3 +1,5 @@
+package Tictactoe;
+
 import java.awt.*;
 import java.awt.event.*;
 
@@ -26,7 +28,6 @@ public class Tictactoe implements ActionListener {
         for (int i = 0; i < board.length; i++){
             board[i] = 0;
         }
-
         windowSetup();
 
     }
@@ -146,6 +147,10 @@ public class Tictactoe implements ActionListener {
 
     public boolean getWin(){
         return win;
+    }
+
+    public void pushButton(int b){
+        buttons[b].doClick();
     }
 
     public static void main(String[] args){
