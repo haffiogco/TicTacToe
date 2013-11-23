@@ -9,22 +9,6 @@ import org.junit.Test;
 
 import is.spalding.tictactoe.Tictactoe;
 
-/**
- * Created with IntelliJ IDEA.
- * User: Stefan
- * Date: 22.11.2013
- * Time: 19:36
- * To change this template use File | Settings | File Templates.
- */
-import Tictactoe.Tictactoe;
-
-/**
- * Created with IntelliJ IDEA.
- * User: Stefán
- * Date: 22.11.2013
- * Time: 19:36
- * To change this template use File | Settings | File Templates.
- */
 public class TictactoeTest {
 
 
