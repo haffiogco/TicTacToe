@@ -1,9 +1,9 @@
-﻿package Spalding;
+﻿//package spalding;
 
 import org.junit.Test;
-import static junit.framework.Assert.assertEquals;
+import static org.junit.Assert.assertEquals;
 
-import Tictactoe.Tictactoe;
+import spalding.Tictactoe;
 
 /**
  * Created with IntelliJ IDEA.
@@ -49,7 +49,7 @@ public class TictactoeTest {
             System.out.println("Error");
         }
     }
-
+    @Test
     public void testDraw(){
         Tictactoe T = new Tictactoe();
         int player = 1;
