@@ -81,7 +81,7 @@ public class TictactoeTest {
     public static void main(String[] args){
         TictactoeTest T = new TictactoeTest();
         T.testWin();
-        //T.testDraw();
+        T.testDraw();
     }
 
 }
