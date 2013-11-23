@@ -46,40 +46,43 @@ public class Tictactoe implements ActionListener {
         window.setVisible(true);
     }
 
-    @Override
+        @Override
     public void actionPerformed(ActionEvent e) {
         //To change body of implemented methods use File | Settings | File Templates.
 
         for(int i = 0; i < buttons.length; i++){
             if(e.getSource() == buttons[i]){
                 board[i] = player;
+                if(player == 1){
+                    buttons[i].setText("X");
+                }
+                else{
+                    buttons[i].setText("O");
+                }
+                buttons[i].setEnabled(false);
                 buttonPressed(i);
             }
         }
+    }
 
+    public void buttonPressed(int bNr) {
+        checkforwin();
+        
+        counter+=1;
+        if(counter == 9)
+        {
+            gameOver();
+        }
+        
         if(player == 1){
             player = 2;
         }
         else{
             player = 1;
         }
-    }
-
-    public void buttonPressed(int bNr) {
-        if(player == 1){
-            buttons[bNr].setText("X");
-        }
-        else{
-            buttons[bNr].setText("O");
-        }
-        buttons[bNr].setEnabled(false);
-        checkforwin();
         
-        counter+=1;
-        if(counter == 9)
-        {
-        	gameOver();
-        }
+            
+    }
         
         
         
