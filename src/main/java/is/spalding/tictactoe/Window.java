@@ -15,7 +15,7 @@ import java.awt.event.ActionListener;
 public class Window implements ActionListener{
     private Font f = new Font("Dialog", Font.PLAIN, 50);
 
-    private JFrame window = new JFrame("Tic-Tac-Toe");
+    private JFrame window = new JFrame("Tic-Tac-phoe");
     private JButton[] buttons;
 
     Tictactoe T;
